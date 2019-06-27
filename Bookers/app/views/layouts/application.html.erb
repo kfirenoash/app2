@@ -5,12 +5,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+ </head>
   <body>
-    <%= link_to 'Home', user_path(current_user.id) %>
+     <%= render 'root/toplist', root: @root %>
+     <div class="notice" >
+       <p><%= flash[:notice] %></p>
+     </div>
+
     <%= yield %>
   </body>
+
+  <footer>
+ <div class="footer-text">
+  <P>CopyRight Infratop.inc</P>
+ </div>
+</footer>
+
 </html>

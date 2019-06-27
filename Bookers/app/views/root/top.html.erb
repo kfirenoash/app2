@@ -1,25 +1,24 @@
-<html>
- <head>
-    <title>Bookers</title>
- </head>
- <body>
-    <header>
-        <h2>Bookers</h2>
-    </header>
 
-    <div class="body-text">
-        <h1>welcome to<strong> Bookers</strong> !!</h1>
-        <P> In<strong>Bookers</strong>,<br>
-            you can share and exchange your opinions , inpressions , and emotions<br>
-        about varioius books!</P>
-    </div>
+	<title>Bookers</title>
+</head>
+<body>
 
-    <a href="/users/sign_in"> Log in</a>
-    <a href="/users/sign_up"> Sign Up</a>
+<div class="top-text">
+	<h1>welcome to <span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers!!</h1>
+    <p>In <span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers,<br>
+    	you can share and exchange your opinions , inpressions , and emotions<br>
+    	about varioius books!
+    </p>
+</div>
 
-    <footer>
-         <p>CopyRight Infratop.inc</p>
-    </footer>
+<div class="regi">
+   <p>
+	<%= link_to 'Login', new_user_session_path, class: "btn btn-primary" %><br>
+	<%= link_to 'Sing up', new_user_registration_path, class: "btn btn-success" %><br>
+   </p>
+</div>
 
- </body>
+</body>
+
+
 </html>

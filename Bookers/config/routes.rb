@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'bookers' => 'root#top'
+  devise_scope :user do
+    get 'user/sign_up' => 'devise/registrations#new'
+  end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show]
+  get 'userinfos/new'
+  get 'home/about' => "root#about"
+
+  root 'root#top'
+
+      resources :users, only: [:index,:show, :edit,:update]
+      resources :books
 
 end
